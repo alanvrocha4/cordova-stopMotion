@@ -58,7 +58,6 @@
 		<source-file src="src/android/Library/res/layout/activity_camera.xml" target-dir="res/layout"/>
 
 		<source-file src="src/android/Library/res/values/dimens.xml" target-dir="res/values"/>
-		<source-file src="src/android/Library/res/values/strings.xml" target-dir="res/values"/>
 		<source-file src="src/android/Library/res/values/styles.xml" target-dir="res/values"/>
 
 		<source-file src="src/android/Library/res/values-v11/styles.xml" target-dir="res/values-v11"/>
