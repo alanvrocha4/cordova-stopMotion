@@ -37,6 +37,9 @@ public class CameraActivity extends Activity {
     public static final int MEDIA_TYPE_VIDEO = 2;
     ArrayList<String> imgsPath = new ArrayList<String>();
 	protected static final String TAG = "TESTECAMERA";
+    protected final static String[] permissions = { Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE };
+     public static final int TAKE_PIC_SEC = 0;
+
 
 	private boolean checkCameraHardware(Context context) {
 	    if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
@@ -50,6 +53,14 @@ public class CameraActivity extends Activity {
 	
 	/** A safe way to get an instance of the Camera object. */
 	public static Camera getCameraInstance(){
+
+
+        if(!PermissionHelper.hasPermission(this,Manifest.permission.CAMERA))
+            PermissionHelper.requestPermission(this, TAKE_PIC_SEC, Manifest.permission.CAMERA);
+
+        if(!PermissionHelper.hasPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
+            PermissionHelper.requestPermission(this, TAKE_PIC_SEC, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
 	    Camera c = null;
 	    try {
 	        c = Camera.open(); // attempt to get a Camera instance
