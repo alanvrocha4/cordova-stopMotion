@@ -76,7 +76,7 @@ public class CameraActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         FakeR fakeR = new FakeR(this);
         super.onCreate(savedInstanceState);
-        setContentView(fakeR.getId("layout", "activity_camera"));
+        setContentView(fakeR.getId("layout", "stopmotion_activity_camera"));
 
         // Create an instance of Camera
         mCamera = getCameraInstance();
