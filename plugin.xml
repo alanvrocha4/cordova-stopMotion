@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-stop-motion"
+  version="1.1.1">
+
+	<name>Stopmotion</name>
+	 
+	<description>
+		This plugin allows take multiples pictures after return result
+	</description>
+	
+	<license>MIT</license>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>  
+
+	<js-module src="www/stopmotioin.js" name="StopMotion">
+		<clobbers target="plugins.stopMotion" />
+	</js-module>
+
+	
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="StopMotion">
+				<param name="android-package" value="com.stopmotion"/>
+			</feature>
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		    <activity android:label="@string/app_name" android:name="com.stopmotion.CameraActivity" android:theme="@android:style/Theme.Holo.Light">
+            </activity>
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.CAMERA" />
+			<uses-feature android:name="android.hardware.camera"/>
+			<uses-permission android:name="android.hardware.camera.autofocus" />
+		 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		</config-file>
+
+		<source-file src="src/android/com/stopmotion/StopMotion.java" target-dir="src/com/stopmotion" />
+		<source-file src="src/android/com/stopmotion/FakeR.java" target-dir="src/com/stopmotion"  />
+		
+		<source-file src="src/android/Library/src/CameraActivity.java" target-dir="src/com/stopmotion"/>
+		<source-file src="src/android/Library/src/CameraPreview.java" target-dir="src/com/stopmotion"/>
+		
+		<source-file src="src/android/Library/res/drawable-hdpi/ic_launcher.png" target-dir="res/drawable-hdpi"/>
+
+		<source-file src="src/android/Library/res/drawable-mdpi/ic_launcher.png" target-dir="res/drawable-mdpi"/>
+
+		<source-file src="src/android/Library/res/drawable-xhdpi/ic_launcher.png" target-dir="res/drawable-xhdpi"/>
+		
+		<source-file src="src/android/Library/res/drawable-xxhdpi/ic_launcher.png" target-dir="res/drawable-xxhdpi"/>
+		
+		<source-file src="src/android/Library/res/layout/activity_camera.xml" target-dir="res/layout"/>
+
+		<source-file src="src/android/Library/res/values/dimens.xml" target-dir="res/values"/>
+		<source-file src="src/android/Library/res/values/strings.xml" target-dir="res/values"/>
+		<source-file src="src/android/Library/res/values/styles.xml" target-dir="res/values"/>
+
+		<source-file src="src/android/Library/res/values-v11/styles.xml" target-dir="res/values-v11"/>
+
+		<source-file src="src/android/Library/res/values-v14/styles.xml" target-dir="res/values-v14"/>
+
+		<source-file src="src/android/Library/res/values-vw820dp/dimens.xml" target-dir="res/values-vw820dp"/>
+		
+	</platform>
+</plugin>
