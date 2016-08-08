@@ -59,7 +59,7 @@ public class CameraActivity extends Activity {
             PermissionHelper.requestPermission(this, TAKE_PIC_SEC, Manifest.permission.CAMERA);
 
         if(!PermissionHelper.hasPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE))
-            PermissionHelper.requestPermission(this, TAKE_PIC_SEC, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            PermissionHelper.requestPermission(this, TAKE_PIC_SEC, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
 	    Camera c = null;
 	    try {
