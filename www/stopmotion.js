@@ -18,7 +18,10 @@ StopMotion.prototype.getPictures = function(success, fail, options) {
 	if (!options) {
 		options = {};
 	}
-	
+console.log(success);
+console.log(fail);
+console.log(options);
+
 	var params = {};
 
 	return cordova.exec(success, fail, "StopMotion", "getPictures", [params]);

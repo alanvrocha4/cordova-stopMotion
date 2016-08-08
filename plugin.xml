@@ -4,10 +4,10 @@
   id="cordova-plugin-stop-motion"
   version="1.1.1">
 
-	<name>Stopmotion</name>
+	<name>StopMotion</name>
 	 
 	<description>
-		This plugin allows take multiples pictures after return result
+		This plugin allows take multiples pictures before return result
 	</description>
 	
 	<license>MIT</license>
@@ -46,14 +46,6 @@
 		
 		<source-file src="src/android/Library/src/CameraActivity.java" target-dir="src/com/stopmotion"/>
 		<source-file src="src/android/Library/src/CameraPreview.java" target-dir="src/com/stopmotion"/>
-		
-		<source-file src="src/android/Library/res/drawable-hdpi/ic_launcher.png" target-dir="res/drawable-hdpi"/>
-
-		<source-file src="src/android/Library/res/drawable-mdpi/ic_launcher.png" target-dir="res/drawable-mdpi"/>
-
-		<source-file src="src/android/Library/res/drawable-xhdpi/ic_launcher.png" target-dir="res/drawable-xhdpi"/>
-		
-		<source-file src="src/android/Library/res/drawable-xxhdpi/ic_launcher.png" target-dir="res/drawable-xxhdpi"/>
 		
 		<source-file src="src/android/Library/res/layout/stopmotion_activity_camera.xml" target-dir="res/layout"/>
 
