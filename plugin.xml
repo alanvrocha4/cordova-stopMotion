@@ -16,7 +16,7 @@
 		<engine name="cordova" version=">=3.0.0" />
 	</engines>  
 
-	<js-module src="www/stopmotioin.js" name="StopMotion">
+	<js-module src="www/stopmotion.js" name="StopMotion">
 		<clobbers target="plugins.stopMotion" />
 	</js-module>
 
