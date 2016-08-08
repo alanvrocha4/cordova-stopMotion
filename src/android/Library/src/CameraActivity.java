@@ -28,6 +28,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
+import org.apache.cordova.PermissionHelper;
 
 public class CameraActivity extends Activity {
 	
