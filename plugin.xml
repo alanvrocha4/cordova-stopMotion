@@ -57,9 +57,5 @@
 		
 		<source-file src="src/android/Library/res/layout/stopmotion_activity_camera.xml" target-dir="res/layout"/>
 
-		<source-file src="src/android/Library/res/values-v11/styles.xml" target-dir="res/values-v11"/>
-
-		<source-file src="src/android/Library/res/values-v14/styles.xml" target-dir="res/values-v14"/>
-		
 	</platform>
 </plugin>
