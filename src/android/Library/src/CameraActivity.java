@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.List;
 
 import com.stopmotion.FakeR;
-import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
